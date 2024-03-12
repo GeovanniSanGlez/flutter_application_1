@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -85,14 +84,13 @@ class _LoginPageState extends State<LoginPage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Welcome",
+          "BIENVENIDO",
           style: TextStyle(
               color: myColor, fontSize: 32, fontWeight: FontWeight.w500),
         
         ),
-        _buildGreyText("Please login with your information"),
         const SizedBox(height: 60),
-        _buildGreyText("Email address"),
+        _buildGreyText("Email"),
         _buildInputField(emailController),
         const SizedBox(height: 40),
         _buildGreyText("Password"),
@@ -118,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        suffixIcon: isPassword ? Icon(Icons.remove_red_eye) : Icon(Icons.done),
+        suffixIcon: isPassword ? const Icon(Icons.remove_red_eye) : const Icon(Icons.done),
       ),
       obscureText: isPassword,
     );
@@ -137,11 +135,11 @@ class _LoginPageState extends State<LoginPage> {
                     rememberUser = value!;
                   });
                 }),
-            _buildGreyText("Remember me"),
+            _buildGreyText("Recordar datos"),
           ],
         ),
         TextButton(
-            onPressed: () {}, child: _buildGreyText("I forgot my password"))
+            onPressed: () {}, child: _buildGreyText("Olvide mi CONTRACEÑA "))
       ],
     );
   }
@@ -156,27 +154,18 @@ class _LoginPageState extends State<LoginPage> {
         shape: const StadiumBorder(),
         elevation: 20,
         shadowColor: myColor,
-        minimumSize: const Size.fromHeight(60),
+        minimumSize: const Size.fromHeight(40),
       ),
       child: const Text("LOGIN"),
     );
   }
   Widget _buildOtherLogin() {
-    return Center(
-      child: Column(
-        children: [
-          _buildGreyText("Or Login with"),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Tab(icon: Image.asset("assets/images/facebook.png")),
-              Tab(icon: Image.asset("assets/images/twitter.png")),
-              Tab(icon: Image.asset("assets/images/github.png")),
-            ],
-          )
-        ],
-      ),
+    return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+      children: const [
+        Text("No tienes una cuenta?"),
+        Text("Registrate aqui", style: TextStyle(fontWeight: FontWeight.bold)),
+      ],
     );
   }
 
