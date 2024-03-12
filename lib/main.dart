@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/home.pege.dart';
 import 'package:flutter_application_1/login_page.dart';
 
 void main() {
@@ -14,6 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
+      routes: {
+        "homePege" :(context) => HomePege(),
+        "loginPege" :(context) => LoginPage(),
+      },
       home: const LoginPage(),
       debugShowCheckedModeBanner: false,
     );

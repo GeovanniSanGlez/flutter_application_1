@@ -45,12 +45,12 @@ class _LoginPageState extends State<LoginPage> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Icon(
-            Icons.location_on_sharp,
+            Icons.amp_stories_rounded,
             size: 100,
             color: Colors.white,
           ),
           Text(
-            "Go MAP",
+            "INV CATAL",
             style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -116,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        suffixIcon: isPassword ? const Icon(Icons.remove_red_eye) : const Icon(Icons.done),
+        suffixIcon: isPassword ? const Icon(Icons.remove_red_eye) : const Icon(Icons.account_circle_sharp),
       ),
       obscureText: isPassword,
     );
@@ -164,7 +164,7 @@ class _LoginPageState extends State<LoginPage> {
     mainAxisAlignment: MainAxisAlignment.center,
       children: const [
         Text("No tienes una cuenta?"),
-        Text("Registrate aqui", style: TextStyle(fontWeight: FontWeight.bold)),
+        Text("Registrate aqui", style: TextStyle(color: Colors.blueAccent)),
       ],
     );
   }
