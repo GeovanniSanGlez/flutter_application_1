@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       routes: {
-        "homePege" :(context) => HomePege(),
-        "loginPege" :(context) => LoginPage(),
+        "homePege":(context) => HomePege(),
       },
       home: const LoginPage(),
       debugShowCheckedModeBanner: false,

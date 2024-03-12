@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-class HomePege extends StatefulWidget{
+class HomePege extends StatefulWidget {
   const HomePege({super.key});
   @override
-  Widget build(BuildContext context){
-    var padding = Padding(padding: EdgeInsets.all(8),
-            decoration:BoxDecoration(backgroundBlendMode:),
-            );
-    return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child:Column(
-            children: [padding],
-          ) 
-        ),
-      ),
-    );
-  }
+  State<HomePege> createState() => _HomePegeState();
+}
 
-  dynamic get newMethod => Decoration;
+class _HomePegeState extends State<HomePege> {
+  late Color myColor;
+  late Size mediaSize;
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  bool rememberUser = false;
+
+  @override
+  Widget build(BuildContext context) {
+    myColor = Theme.of(context).primaryColor;
+    mediaSize = MediaQuery.of(context).size;
+    return Container(
+
+  );
+
 }
